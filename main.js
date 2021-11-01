@@ -14,7 +14,7 @@ const humidity = document.querySelector("#humidity");
 const wind = document.querySelector("#wind");
 const pressure = document.querySelector("#pressure");
 const visibility = document.querySelector("#visibility");
-
+const loader = document.querySelector("#loader");
 
 let curTemp = "metric";
 
@@ -55,15 +55,21 @@ async function getWeather(city) {
                 APIkey,
             { mode: "cors" }
         );
-        try {
-            let data = await response.json();
-            console.log(data);
+
+        let data = await response.json();
+        console.log(data);
+
+        loader.style.display = "flex";
+        setTimeout(function () {
+            loader.style.display = "none";
+        }, 500);
+
+        setTimeout(function () {
             fillPage(data);
-        } catch (err) {
-            alert("City not found");
-        }
+        }, 600);
+        
     } catch (error) {
-        console.log(error);
+        console.log("City not found!");
     }
 }
 
@@ -71,10 +77,10 @@ getWeather("London");
 
 function fillPage(data) {
     city.textContent = data.name;
-    country.textContent = data.sys.country;
+    country.textContent ="," +data.sys.country;
     //+','+data.sys.country;
     weather.textContent = data.weather[0].main;
-    temp.textContent = Math.round(data.main.temp);
+    temp.textContent = Math.round(data.main.temp) + "°";
     desc.textContent = `Today: ${
         data.weather[0].description
     }. The high will be ${Math.round(
@@ -83,7 +89,7 @@ function fillPage(data) {
 
     feelslike.textContent = Math.round(data.main.feels_like) + "°";
     humidity.textContent = data.main.humidity + "%";
-        wind.textContent = Math.round(data.wind.speed) + " km/hr";
-        pressure.textContent=data.main.pressure +" hPa";
-        visibility.textContent =data.visibility/100 +" km";
+    wind.textContent = Math.round(data.wind.speed) + " km/hr";
+    pressure.textContent = data.main.pressure + " hPa";
+    visibility.textContent = data.visibility / 100 + " km";
 }
