@@ -1,0 +1,209 @@
+:root {
+  --black: rgb(63, 66, 70);
+  --orange: rgb(228, 109, 40);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  color: var(--black);
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+button {
+  cursor: pointer;
+}
+
+.curTemp {
+  font-weight: 800;
+}
+
+nav {
+  width: 100%;
+  height: 13vh;
+  background-color: var(--black);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav img {
+  margin-left: 2rem;
+  width: 200px;
+  padding: 2rem;
+}
+
+nav div#searchContainer {
+  width: 70%;
+}
+
+nav div#searchContainer input {
+  border: 0px solid black;
+  margin-left: 2rem;
+  margin-right: 0;
+  padding: 0.7rem;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  width: 50%;
+}
+
+nav div#searchContainer button {
+  border: 0px solid black;
+  color: white;
+  background-color: var(--orange);
+  margin-left: 0;
+  padding: 0.7rem;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+nav div#tempType {
+  width: 20%;
+}
+
+nav div#tempType button {
+  background-color: white;
+  margin-right: 2rem;
+  width: 80%;
+  padding: 0.5rem 0rem;
+  border-radius: 0.5rem;
+}
+
+#content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 87vh;
+}
+
+#content main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 70%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#content main .city {
+  font-size: 2.5rem;
+}
+
+#content main .weather {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+
+#content main .temp {
+  margin-top: 2rem;
+  font-size: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+#content main .temp #temp {
+  font-size: 4rem;
+}
+
+#content main #desc {
+  margin-top: 3rem;
+}
+
+#content section {
+  height: 30%;
+  background-color: var(--black);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.top {
+  color: #868585;
+}
+
+.dopInfa {
+  margin-top: 0.5rem;
+  color: white;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dopBlock {
+  margin: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#cityCountry {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-size: 2.5rem;
+}
+
+#cityCountry #country {
+  font-size: 2.5rem;
+}
