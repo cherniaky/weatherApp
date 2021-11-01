@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+    <nav class="search">
+        <img src="./logo.png" alt="logo">
+        <div id="searchContainer">
+            <input type="search" placeholder="Enter a city" name="" id="search">
+            <button>Search</button>
+        </div>
+        <div id="tempType">
+            <button><span id="C" class="curTemp">°C</span> / <span id="F">°F</span> </button>
+        </div>
+    </nav>
+
+
+    <div id="content">
+        <main>
+            <div id="cityCountry">
+                <div class="city"></div>,<div id="country"></div>
+            </div>
+
+            <div class="weather"></div>
+            <div class="temp">
+                <div id="temp"></div> °
+            </div>
+            <div id="desc"></div>
+        </main>
+
+        <section>
+            <div class="dopBlock">
+                <div class="top">FEELS LIKE</div>
+
+                <div id="feelslike" class="dopInfa"></div>
+            </div>
+            <div class="dopBlock">
+                <div class="top">HUMIDITY</div>
+            
+                <div id="humidity" class="dopInfa"></div>
+            </div>
+            <div class="dopBlock">
+                <div class="top">WIND</div>
+            
+                <div id="wind" class="dopInfa"></div>
+            </div>
+            <div class="dopBlock">
+                <div class="top">PRESSURE</div>
+            
+                <div id="pressure" class="dopInfa"></div>
+            </div>
+            <div class="dopBlock">
+                <div class="top">VISIBILITY</div>
+            
+                <div id="visibility" class="dopInfa"></div>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+
+</html>
